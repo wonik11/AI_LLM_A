@@ -23,7 +23,7 @@ class ReviewData(BaseModel):
 @app.post("/api/analyze")
 def analyze_review(data: ReviewData):
     # 모델 초기화 (환경 변수 OPENAI_API_KEY 자동 참조)
-    model = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.2)
+    model = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.2)
     parser = StrOutputParser()
 
     # 1. 리뷰 요약
