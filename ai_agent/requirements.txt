@@ -1,0 +1,22 @@
+# ==============================================================================
+# FastAPI + FAISS + Hybrid Search (BM25) + Multi-Query + RAG Fusion 패키지 목록
+# 공통 가상환경(ai-class-env) 및 Google Cloud Run(Docker) 배포에 사용됩니다.
+# ==============================================================================
+
+# 1. 웹 프레임워크 및 ASGI 서버
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.9
+pydantic>=2.8.0
+
+# 2. 벡터 검색(FAISS) 및 키워드 검색(BM25) 엔진
+faiss-cpu>=1.8.0
+rank-bm25>=0.2.2
+numpy>=1.26.0
+
+# 3. PDF 문서 파싱
+pypdf>=4.3.0
+
+# 4. LLM 및 임베딩 API 클라이언트 (선택적 연동: API 키 미설정 시 내장 로컬 엔진으로 자동 폴백)
+openai>=1.40.0
+httpx>=0.27.0
